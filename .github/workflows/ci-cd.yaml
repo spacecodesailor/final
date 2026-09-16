@@ -1,0 +1,24 @@
+name: Multi-job CI/CD for Back and Front
+
+on:
+    push:
+        branches: [ main ]
+
+jobs:
+    build-back:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                component: [back, front] 
+        steps:
+          - name: Checkout Code
+            uses: actions/checkout@v4
+
+          - name: Setup Node.js
+            uses: actions/setup-node@v4
+            with:
+                node-version: '12' 
+          - name: Install dependencies
+            run: |
+                cd ${{ matrix.component }}
+                nmp install
