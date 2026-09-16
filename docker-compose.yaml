@@ -48,5 +48,5 @@ services:
     deploy:
       placement:
          constraints:
-             - node.hostname == node1
+             - node.hostname == labX4LO94
 
