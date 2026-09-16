@@ -2,11 +2,7 @@ version: '3.5'
 
 networks:
   db_net:
-    driver: overlay
-    attachable: true
   web_net:
-    driver: overlay
-    attachable: true
 
 volumes:
   db_data:
