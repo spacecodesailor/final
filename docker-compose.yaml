@@ -2,7 +2,17 @@ version: '3.5'
 
 networks:
   db_net:
+    driver: overlay
+    attachable: true
+    ipam:
+      config:
+        - subnet: 10.11.0.0/16     # Plage dédiée pour la base de données
   web_net:
+    driver: overlay
+    attachable: true
+    ipam:
+      config:
+        - subnet: 10.12.0.0/16 
 
 volumes:
   db_data:
