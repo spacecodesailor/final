@@ -17,7 +17,7 @@ services:
       depends_on:
         - front
   front:
-    image: ${DOCKERHUB_USERNAME}/sfeir-back:${IMAGE_TAG}
+    image: ${DOCKERHUB_USERNAME}/sfeir-front:${IMAGE_TAG}
     build: ./front
     ports:
         - "80:3000"
