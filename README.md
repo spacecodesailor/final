@@ -77,3 +77,5 @@ docker service logs -f final-pipeline_back
 cd ~/actions-runner
 sudo ./svc.sh status
 ```
+
+added cache
